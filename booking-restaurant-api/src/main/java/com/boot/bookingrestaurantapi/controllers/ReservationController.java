@@ -31,7 +31,7 @@ public class ReservationController {
 	@RequestMapping(value = "reservation" + "/{" + "reservationId"
 			+ "}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public BookingResponse<ReservationRest> getReservationById(@PathVariable Long reservationId) throws BookingException {
-		return new BookingResponse<>("Succes", String.valueOf(HttpStatus.OK), "OK",
+		return new BookingResponse<>("Success", String.valueOf(HttpStatus.OK), "OK",
 				reservationService.getReservation(reservationId));
 	}
 
@@ -39,7 +39,7 @@ public class ReservationController {
 	@RequestMapping(value = "reservation", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public BookingResponse<String> createReservation(@RequestBody @Valid CreateReservationRest createReservationRest)
 			throws BookingException {
-		return new BookingResponse<>("Succes", String.valueOf(HttpStatus.OK), "OK",
+		return new BookingResponse<>("Success", String.valueOf(HttpStatus.OK), "OK",
 				reservationService.createReservation(createReservationRest));
 	}
 

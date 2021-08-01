@@ -25,7 +25,7 @@ public class CancelReservationController {
 	@ResponseStatus(HttpStatus.OK)
 	@RequestMapping(value = "/deleteReservation", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public BookingResponse<String> deleteReservation(@RequestParam String locator) throws BookingException {
-		return new BookingResponse<>("Succes", String.valueOf(HttpStatus.OK), "OK",
+		return new BookingResponse<>("Success", String.valueOf(HttpStatus.OK), "OK",
 				cancelReservationService.deleteReservation(locator));
 	}
 

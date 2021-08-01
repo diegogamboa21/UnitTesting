@@ -12,7 +12,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.http.HttpStatus;
 
 import com.boot.bookingrestaurantapi.controllers.RestaurantController;
 import com.boot.bookingrestaurantapi.exceptions.BookingException;
